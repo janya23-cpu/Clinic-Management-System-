@@ -1,0 +1,24 @@
+document.getElementById('tokenForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const patientName = document.getElementById('patientName').value;
+    const patientContact = document.getElementById('patientContact').value;
+    const token = generateToken();
+
+    // Store token and patient info in Firebase
+    firebase.database().ref('tokens').push({
+        token,
+        patientName,
+        patientContact,
+        timestamp: firebase.database.ServerValue.TIMESTAMP
+    }).then(() => {
+        alert(`Token generated: ${token}`);
+    }).catch((error) => {
+        console.error('Error generating token:', error);
+        alert('Token generation failed.');
+    });
+});
+
+function generateToken() {
+    return Math.floor(Math.random() * 1000000).toString().padStart(6, '0');
+}
