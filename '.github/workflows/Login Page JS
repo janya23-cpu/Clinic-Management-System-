@@ -1,0 +1,22 @@
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Firebase authentication
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            const user = userCredential.user;
+            // Redirect to dashboard based on role
+            if (user.email === 'doctor@example.com') {
+                window.location.href = 'doctor_dashboard.html';
+            } else if (user.email === 'receptionist@example.com') {
+                window.location.href = 'receptionist_dashboard.html';
+            }
+        })
+        .catch((error) => {
+            console.error('Error logging in:', error);
+            alert('Login failed. Please check your credentials.');
+        });
+});
