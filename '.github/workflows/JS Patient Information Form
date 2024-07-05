@@ -1,0 +1,20 @@
+document.getElementById('patientInfoForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const patientName = document.getElementById('patientName').value;
+    const patientContact = document.getElementById('patientContact').value;
+    const prescription = document.getElementById('prescription').value;
+
+    // Store patient info and prescription in Firebase
+    firebase.database().ref('patients').push({
+        patientName,
+        patientContact,
+        prescription,
+        timestamp: firebase.database.ServerValue.TIMESTAMP
+    }).then(() => {
+        alert('Patient information saved successfully.');
+    }).catch((error) => {
+        console.error('Error saving patient information:', error);
+        alert('Failed to save patient information.');
+    });
+});
