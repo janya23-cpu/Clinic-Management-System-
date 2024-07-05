@@ -1,0 +1,22 @@
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/<USERNAME>/<REPOSITORY>.git
+git push -u origin master
+
+clinic-management-system/
+│
+├── index.html
+├── styles.css
+├── scripts.js
+├── login.html
+├── doctor_dashboard.html
+├── receptionist_dashboard.html
+├── token_generation.html
+├── patient_info.html
+├── billing.html
+├── patient_history.html
+└── README.md
+
+cd <REPOSITORY>
+
+Would you like assistance with creating the repository or any specific part of the process?
