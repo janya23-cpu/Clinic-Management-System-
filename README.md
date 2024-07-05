@@ -12,4 +12,4 @@ The Clinic Management System is designed to facilitate communication between doc
 ## How to Set Up
 1. Clone the repository:
    ```sh
-   git clone https://github.com/<YOUR_USERNAME>/clinic-management-system.git
+   git clone https://github.com/<janya23-cpu>/clinic-management-system.git
