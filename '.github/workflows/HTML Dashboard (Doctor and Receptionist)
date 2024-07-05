@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Management System - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome, Doctor/Receptionist</h2>
+        <nav>
+            <ul>
+                <li><a href="token_generation.html">Generate Token</a></li>
+                <li><a href="patient_info.html">Patient Information</a></li>
+                <li><a href="billing.html">Billing</a></li>
+                <li><a href="patient_history.html">Patient History</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
